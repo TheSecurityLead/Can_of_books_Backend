@@ -1,12 +1,13 @@
 const express = require('express');
 const cors = require("cors")
 const mongoose = require('mongoose');
-const Book = require('./models/book'); // Import the Book model
+const Book = require('./models/book');
+const config = require('./config/config'); // Import the Book model
 
 const app = express();
 const port = 3000;
 
-mongoose.connect('mongodb://localhost:27017/your-database-name', {
+mongoose.connect('mongodb+srv://sgrie10:password1234@cluster0.ryy2uov.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
